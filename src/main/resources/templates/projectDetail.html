@@ -2,12 +2,17 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorate="layout">
 <head>
 <meta charset="utf-8">
-<title>毕业设计商城</title>
+<title>毕业设计商城-项目详情</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+</style>
 </head>
 <body>
 	<div layout:fragment="content" class="home">
-		<p>sdsdfsdfsdfsdfsdfsdf</p>
+     <div class="container">
+       <h3 th:text="${project.projectName}">project name</h3>
+       <p th:text="${project.projectDesc}">project description</p>
+     </div>
 	</div>
 </body>
 </html>
