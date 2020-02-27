@@ -24,4 +24,9 @@ public class ProjectServiceImpl implements ProjectService{
 		return repo.getOne(id);
 	}
 
+	@Override
+	public List<Project> getProjectsByTags(String tags) {
+		return repo.getProjectsByTags(tags);
+	}
+
 }

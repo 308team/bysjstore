@@ -10,4 +10,6 @@ public interface ProjectService {
 
 	Project getProjectById(Integer id);
 
+	List<Project> getProjectsByTags(String tags);
+
 }

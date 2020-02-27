@@ -27,15 +27,18 @@ public class Project implements Serializable {
 
 	@Column(name = "title")
 	private String title;
-	
+
 	@Column(name = "subtitle")
 	private String subtitle;
 
 	@Column(name = "description")
 	private String description;
-	
+
 	@Column(name = "image_url")
 	private String imageUrl;
+
+	@Column(name = "tags")
+	private String tags;
 
 	public Integer getId() {
 		return id;
@@ -75,6 +78,14 @@ public class Project implements Serializable {
 
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
+	}
+
+	public String getTags() {
+		return tags;
+	}
+
+	public void setTags(String tags) {
+		this.tags = tags;
 	}
 
 	@Override
