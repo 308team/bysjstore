@@ -25,11 +25,17 @@ public class Project implements Serializable {
 	@Id
 	private Integer id;
 
-	@Column(name = "project_name")
-	private String projectName;
+	@Column(name = "title")
+	private String title;
+	
+	@Column(name = "subtitle")
+	private String subtitle;
 
-	@Column(name = "project_desc")
-	private String projectDesc;
+	@Column(name = "description")
+	private String description;
+	
+	@Column(name = "image_url")
+	private String imageUrl;
 
 	public Integer getId() {
 		return id;
@@ -39,27 +45,41 @@ public class Project implements Serializable {
 		this.id = id;
 	}
 
-	public String getProjectName() {
-		return projectName;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setProjectName(String projectName) {
-		this.projectName = projectName;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getProjectDesc() {
-		return projectDesc;
+	public String getSubtitle() {
+		return subtitle;
 	}
 
-	public void setProjectDesc(String projectDesc) {
-		this.projectDesc = projectDesc;
+	public void setSubtitle(String subtitle) {
+		this.subtitle = subtitle;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	@Override
 	public String toString() {
-		return "Project [id=" + id + ", projectName=" + projectName + ", projectDesc=" + projectDesc + "]";
+		return "Project [id=" + id + ", title=" + title + ", subtitle=" + subtitle + ", description=" + description
+				+ ", imageUrl=" + imageUrl + "]";
 	}
-	
-	
-
 }

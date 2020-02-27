@@ -1,0 +1,19 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://47.104.151.2:3306/bysjstore
+    username: root
+    password: wjd921014
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+  
+server:
+  tomcat:
+    basedir: target/tomcat
+
+aliyun:
+  oss:
+    acces_key: LTAI4Fm7r3ruY5J6NGabECVt
+    access_secret: Hv4cYDgbqj193IDmUz76ld9snmf59f
