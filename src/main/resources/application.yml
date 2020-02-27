@@ -2,7 +2,7 @@ spring:
   thymeleaf:
     cache: false
   datasource:
-    url: jdbc:mysql://47.104.151.2:3306/bysjstore
+    url: jdbc:mysql://47.104.151.2:3306/bysjstore?useUnicode=true&characterEncoding=utf-8
     username: root
     password: wjd921014
     driver-class-name: com.mysql.jdbc.Driver
