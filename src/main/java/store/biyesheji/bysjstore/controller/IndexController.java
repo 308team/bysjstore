@@ -15,6 +15,11 @@ public class IndexController {
 	public String customize() {
 		return "customize";
 	}
+	
+	@RequestMapping("/contactus")
+	public String contactus() {
+		return "contactus";
+	}
 
 
 }
