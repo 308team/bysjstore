@@ -1,11 +1,16 @@
 package store.biyesheji.bysjstore.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import lombok.Data;
+
 
 /**
  * 项目实体类
@@ -13,6 +18,7 @@ import javax.persistence.Table;
  * @author Jingdong
  *
  */
+@Data
 @Entity
 @Table(name = "t_project")
 public class Project implements Serializable {
@@ -39,58 +45,8 @@ public class Project implements Serializable {
 
 	@Column(name = "tags")
 	private String tags;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getSubtitle() {
-		return subtitle;
-	}
-
-	public void setSubtitle(String subtitle) {
-		this.subtitle = subtitle;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getImageUrl() {
-		return imageUrl;
-	}
-
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
-	}
-
-	public String getTags() {
-		return tags;
-	}
-
-	public void setTags(String tags) {
-		this.tags = tags;
-	}
-
-	@Override
-	public String toString() {
-		return "Project [id=" + id + ", title=" + title + ", subtitle=" + subtitle + ", description=" + description
-				+ ", imageUrl=" + imageUrl + "]";
-	}
+	
+	@Transient
+	private List<ProjectImage> projectImages;
+	
 }
