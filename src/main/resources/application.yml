@@ -10,9 +10,8 @@ spring:
     show-sql: true
   
 server:
-  tomcat:
-    basedir: target/tomcat
-
+    servlet:
+        context-path: /bysjstore
 aliyun:
   oss:
     acces_key: LTAI4Fm7r3ruY5J6NGabECVt
