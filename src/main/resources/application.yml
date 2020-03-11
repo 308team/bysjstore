@@ -8,10 +8,9 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
-  
-server:
-    servlet:
-        context-path: /bysjstore
+    hibernate:
+      ddl-auto: update
+
 aliyun:
   oss:
     acces_key: LTAI4Fm7r3ruY5J6NGabECVt
